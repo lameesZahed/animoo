@@ -37,10 +37,8 @@ dependencies:
   flutter_native_splash: ^2.4.7
   google_fonts: ^6.3.2
   dotted_border: ^3.1.0
-<<<<<<< HEAD
   envied: ^1.3.1
-=======
->>>>>>> 05212ec8706ca56272ee620a6921daaf3936b570
+
 
 
 dev_dependencies:
@@ -53,11 +51,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
-<<<<<<< HEAD
   envied_generator: ^1.3.1
   build_runner: ^2.15.1
-=======
->>>>>>> 05212ec8706ca56272ee620a6921daaf3936b570
+
 
 flutter_native_splash:
   background_image: assets/Splash Screen/under12android.png
