@@ -43,7 +43,7 @@ class DioService implements ApiConsumer {
     Map<String, dynamic>? body,
   }) async {
     try {
-      Response response = await dio.get(
+      Response response = await dio.post(
         url,
         queryParameters: queryParameters,
         data: body,
