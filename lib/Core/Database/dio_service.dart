@@ -21,8 +21,14 @@ class DioService implements ApiConsumer {
     Map<String, dynamic>? queryParameters,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? body,
-  }) {
-    throw UnimplementedError();
+  }) async {
+    final Response response = await dio.delete(
+      url,
+      queryParameters: queryParameters,
+      data: body,
+      options: Options(headers: headers),
+    );
+    return response.data;
   }
 
   @override
@@ -31,8 +37,14 @@ class DioService implements ApiConsumer {
     Map<String, dynamic>? queryParameters,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? body,
-  }) {
-    throw UnimplementedError();
+  }) async {
+    final Response response = await dio.get(
+      url,
+      queryParameters: queryParameters,
+      data: body,
+      options: Options(headers: headers),
+    );
+    return response.data;
   }
 
   @override
