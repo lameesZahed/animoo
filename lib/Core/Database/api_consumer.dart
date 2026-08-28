@@ -18,6 +18,15 @@ abstract class ApiConsumer{
     Map<String, dynamic>? headers,
     Map<String, dynamic>? body,
 });
-  // patch();
-  // put();
-}
+  Future<dynamic>patch({
+    required String url,
+    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? body,
+});
+  Future<dynamic>put({
+    required String url,
+    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? body,
+  });}

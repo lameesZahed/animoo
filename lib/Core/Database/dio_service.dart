@@ -22,13 +22,17 @@ class DioService implements ApiConsumer {
     Map<String, dynamic>? headers,
     Map<String, dynamic>? body,
   }) async {
-    final Response response = await dio.delete(
-      url,
-      queryParameters: queryParameters,
-      data: body,
-      options: Options(headers: headers),
-    );
-    return response.data;
+    try {
+      final Response response = await dio.delete(
+        url,
+        queryParameters: queryParameters,
+        data: body,
+        options: Options(headers: headers),
+      );
+      return response.data;
+    } catch (e) {
+      // TODO
+    }
   }
 
   @override
@@ -38,13 +42,17 @@ class DioService implements ApiConsumer {
     Map<String, dynamic>? headers,
     Map<String, dynamic>? body,
   }) async {
-    final Response response = await dio.get(
-      url,
-      queryParameters: queryParameters,
-      data: body,
-      options: Options(headers: headers),
-    );
-    return response.data;
+    try {
+      final Response response = await dio.get(
+        url,
+        queryParameters: queryParameters,
+        data: body,
+        options: Options(headers: headers),
+      );
+      return response.data;
+    } catch (e) {
+      // TODO
+    }
   }
 
   @override
@@ -64,10 +72,9 @@ class DioService implements ApiConsumer {
 
       return response.data;
     } catch (e) {
-      handleException(e);
+      // TODO
     }
   }
-
 
   void handleException(e) {
     if (e is ServerException) {
@@ -129,5 +136,43 @@ class DioService implements ApiConsumer {
     }
   }
 
-}
+  @override
+  Future patch({
+    required String url,
+    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? body,
+  }) async {
+    try {
+      final Response response = await dio.patch(
+        url,
+        queryParameters: queryParameters,
+        data: body,
+        options: Options(headers: headers),
+      );
+      return response.data;
+    } catch (e) {
+      // TODO
+    }
+  }
 
+  @override
+  Future put({
+    required String url,
+    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? body,
+  }) async {
+    try {
+      final Response response = await dio.put(
+        url,
+        queryParameters: queryParameters,
+        data: body,
+        options: Options(headers: headers),
+      );
+      return response.data;
+    } catch (e) {
+      // TODO
+    }
+  }
+}
