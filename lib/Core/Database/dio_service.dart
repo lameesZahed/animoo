@@ -40,6 +40,8 @@ class DioService implements ApiConsumer {
 
 
 
+
+
   @override
   Future<dynamic> get({
     required String url,
@@ -59,6 +61,10 @@ class DioService implements ApiConsumer {
       handleException(e);
     }
   }
+
+
+
+
 
   @override
   Future<dynamic> post({
@@ -82,6 +88,9 @@ class DioService implements ApiConsumer {
   }
 
 
+
+
+
   @override
   Future patch({
     required String url,
@@ -101,6 +110,10 @@ class DioService implements ApiConsumer {
       handleException(e);
     }
   }
+
+
+
+
 
   @override
   Future put({
