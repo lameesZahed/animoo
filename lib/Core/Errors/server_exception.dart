@@ -44,8 +44,6 @@ void handleException(DioException e) {
           throw ServerException(ErrorModel.fromJson(e.response!.data));
         case 504:
           throw ServerException(ErrorModel.fromJson(e.response!.data));
-        case 400:
-          throw ServerException(ErrorModel.fromJson(e.response!.data));
       }
 
   }
