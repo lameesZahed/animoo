@@ -14,7 +14,8 @@ class AuthApi{
           url: ApiConsts.signUpEndpoint,
           body: user.toJson()
       );
-      return UserModel.fromJson(response);
+      var userData = UserModel.fromJson(response);
+      return userData;
     } on ServerException catch (e) {
       rethrow;
     }
@@ -31,7 +32,8 @@ class AuthApi{
             ApiKeys.password : password,
           }
       );
-      return UserModel.fromJson(response);
+      var userData = UserModel.fromJson(response);
+      return userData;
     } on ServerException catch (e) {
       rethrow;
     }
